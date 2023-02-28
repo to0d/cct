@@ -3,9 +3,10 @@ date = "2015-05-28"
 !outline = "en_1"
 !outline_level = 3
 !top = ""
-mark = "如何使用Lex YACC SegmentFault - example 1"
+mark = "flex Yacc example 2"
 tags = [
     "flex"
+    "RegEx"
 ]
 !template = md2.template
 !domain = ""

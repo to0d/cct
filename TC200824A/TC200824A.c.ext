@@ -1,0 +1,22 @@
++++
+date = "2020-08-24"
+!outline = "en_1"
+!outline_level = 3
+!top = ""
+!mark = ""
+tags = [
+    "DFA",
+    "NFA",
+    "Parser",
+    "teseval",
+    "DEV160419A",
+    "DEV181220A",
+]
+!template = md2.template
+!domain = ""
++++
+
+
+- 2016-07-22 Init
+- 2016-09-02 Support {{@$#}} 
+- 2020-08-24 Porting to IC2, support {{NBR(*)}}

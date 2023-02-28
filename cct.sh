@@ -67,7 +67,7 @@ if [ $lt_action_list == 1 ]; then
     for pt_dir in $test_dir_list
     {
         # query test
-        test_sh_list=$(ls $pt_dir | grep -e "test.sh")
+        test_sh_list=$(ls $pt_dir | grep -e "^TC.*\.${lt_type}$")
         for pt_name in $test_sh_list
         {   pt_sh=$pt_dir/$pt_name    
             echo $pt_dir/$pt_name 
@@ -82,7 +82,7 @@ if [ $lt_action_make == 1 ]; then
     for pt_dir in $test_dir_list
     {    
         # query test
-        test_sh_list=$(ls $pt_dir | grep -e "test.sh")
+        test_sh_list=$(ls $pt_dir | grep -e "^TC.*\.${lt_type}$")
         if [ ! "$test_sh_list" = "" ]
         then
             cd $pt_dir
@@ -102,17 +102,17 @@ if [ $lt_action_run == 1 ]; then
         rm $out_file
     fi
 
-    test_dir_list=$(find $workspace -type d| grep -v -e "\.$")
+    test_dir_list=$(find . -type d | grep -v -e "\.$")
     for pt_dir in $test_dir_list
     {   
         cd $workspace
-        
+         
         # query test
-        test_sh_list=$(ls $pt_dir | grep -e "test.sh")
+        test_sh_list=$(ls $pt_dir | grep -e "^TC.*\.${lt_type}$")
         if [ ! "$test_sh_list" = "" ]
         then   
             cd $pt_dir   
-            pt_sh=test.sh
+            pt_sh=$pt_dir.sh
             pt_out=$pt_sh".out"        
             printf  "%s: " $pt_dir | tee -a $out_file 
             ./$pt_sh > $pt_out 2>&1
@@ -134,7 +134,7 @@ if [ $lt_action_clean == 1 ]; then
     for pt_dir in $test_dir_list
     {    
         # query test
-        test_sh_list=$(ls $pt_dir | grep -e "test.sh")
+        test_sh_list=$(ls $pt_dir | grep -e "^TC.*\.${lt_type}$")
         if [ ! "$test_sh_list" = "" ]
         then
             cd $pt_dir

@@ -1,0 +1,12 @@
++++
+date = "2022-01-16"
+!outline = "en_1"
+!outline_level = 3
+!top = ""
+mark = "Generate MIR"
+tags = [
+    "MIR"
+]
+!template = md2.template
+!domain = ""
++++

@@ -4,8 +4,6 @@ x.main.ctl.x: y.tab.o lex.yy.o
 	mv lex.yy.c lex.yy.c.tmp
 	mv y.tab.c  y.tab.c.tmp
 	mv y.tab.h  y.tab.h.tmp
-	mv lex.yy.o lex.yy.o.tmp
-	mv y.tab.o  y.tab.o.tmp 
 
 lex.yy.o:
 	flex example.l

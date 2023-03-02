@@ -1,0 +1,155 @@
+@ -- Begin function __ModuleHeader__
+ENV [BU4], Version=0x30130118, CharSet=2, ByteReverse=2, SrcLang=2
+OPTN [BUT1], option=0xd, op1=4096
+OPTN [BUT1], option=0x10, op1=1
+OPTN [BUT1], option=0x6, op1=20
+OPTN [BUT1], option=0x5, op1=65535
+OPTN [BUT1], option=0x7, op1=0
+OPTN [BUT1], option=0x2, op1=1
+OPTN [BUT1], option=0x13, op1=3
+OPTN [BUT1], option=0x15, op1=0
+INFO [BUINFO], type=ModIdent, modName="DEFAULT   ", libName="QGPL      "
+INFO [BUINFO], type=CompId, compId="V7R4x07"
+INFO [BUINFO], type=LangId, info='0005000100000000000000000000000000000000'X
+INFO [BUINFO], type=CompVRM, compVRM="V7R4M0"
+INFO [BUINFO], type=OSVRM, osVRM="V7R4M0"
+INFO [BUINFO], type=Authority, authority="*LIBCRTAUT"
+INFO [BUINFO], type=EncryptKey, encryptKey='9A686E0BFBD03259'X
+INFO [BUINFO], type=CodePage, codePage=37
+INFO [BUINFO], type=OBJSSI, compDateTime="30611440"
+INFO [BUINFO], type=MinMaxParms, minNumParms=0, maxNumParms=65535
+INFO [BUINFO], type=Inline, autoInline=0, report=0, threshold=250, limit=2000
+INFO [BUINFO], type=AttrOIR, attrOIR="CPPLE"
+INFO [BUINFO], type=BindEntry, objectTypes=6455, objectName="QC2LE     ", objectLib="QSYS      "
+INFO [BUINFO], type=BindEntry, objectTypes=6455, objectName="QYPPLR510 ", objectLib="QSYS      "
+INFO [BUINFO], type=DebugView, rootSrcView=-1, includeView=-1, listingView=-1
+INFO [BUINFO], type=BitModes, logicalBitMode=64, arithBitMode=64
+INFO [BUINFO], type=ActivationInit, doInit=0
+SRC [BUNAMED], src#=0, name= "*NONE"
+LIT [BULIT], cIndex=1, len=14, dt=Aggr, flag=Read, val="Hello, world\x15\x00"
+LIT [BULIT], cIndex=2, len=31, dt=Aggr, flag=Read, val="a=%d, b=%d, c=%d, d=%d, *p=%d\x15\x00"
+LIT [BULIT], cIndex=3, len=9, dt=Aggr, flag=Read, val="fun1=%d\x15\x00"
+LIT [BULIT], cIndex=4, len=10, dt=Aggr, flag=Read, val="st1.x=%d\x15\x00"
+LIT [BULIT], cIndex=5, len=7, dt=Aggr, flag=Read, val="e1=%d\x15\x00"
+LIT [BULIT0], cIndex=7, dt=Integer, val='00000001'X=1
+LIT [BULIT0], cIndex=6, dt=Integer, val='00000002'X=2
+LIT [BULIT0], cIndex=12, dt=Integer, val='00000000'X=0
+LIT [BULIT], cIndex=11, len=2, dt=Integer, flag=Read, val='0002'X=2
+LIT [BULIT], cIndex=10, len=2, dt=Integer, flag=Read, val='0003'X=3
+LIT [BULIT0], cIndex=9, dt=Integer, val='00000004'X=4
+LIT [BULIT], cIndex=8, len=1, dt=Integer, flag=Read, val='03'X=3
+SYM [BUILD], id#=1, len=4, symFlags={IsInit}, flags={Ref}, dt=Integer, mt=ExtDef, align=4, name="g_a"
+SYMT [BUTYP], type#=1, len=4, flags={}, dt=Integer
+SYM [BUILD], id#=2, symFlags={IsPrototyped,IsLeaf}, flags={Ref}, dt=Func, pt=ExtExposed, name= "_Z4fun1i"
+SYM [BUILDE], id#=2, type#=1, linkage=Private
+SYM [BUILD], id#=3, len=4, owner_id#=2, flags={Ref}, dt=Integer, mt=Arg, align=4, name="x"
+SYM [BUILD], id#=4, len=4, owner_id#=2, flags={Ref,Set}, dt=Integer, mt=Auto, align=4, name= "x.addr"
+SYM [BUILD], id#=5, len=8, owner_id#=2, flags={Ref,Set}, dt=Aggr, mt=Auto, align=4, name="st2"
+SYM [BUILDB], id#=6, len=4, owner_id#=5, flags={Ref,Set}, dt=Integer, offs=0, name="x1"
+SYM [BUILDB], id#=7, len=4, owner_id#=5, flags={Ref,Set}, dt=Integer, offs=4, name="y"
+SYM [BUILD], id#=8, symFlags={IsPrototyped}, flags={Ref}, dt=Func, pt=ExtExposed, name= "main"
+SYM [BUILDE], id#=8, type#=1, linkage=Private
+SYM [BUILD], id#=10, len=4, owner_id#=8, flags={Ref,Set}, dt=Integer, mt=Auto, align=4, name= "retval"
+SYM [BUILD], id#=11, len=4, owner_id#=8, flags={Ref,Set}, dt=Integer, mt=Auto, align=4, name="a"
+SYM [BUILD], id#=12, len=2, owner_id#=8, flags={Ref,Set}, dt=Integer, mt=Auto, align=2, name="b"
+SYM [BUILD], id#=13, len=2, owner_id#=8, flags={Ref,Set}, dt=Integer, mt=Auto, align=2, name="c"
+SYM [BUILD], id#=14, len=4, owner_id#=8, flags={Ref,Set}, dt=Integer, mt=Auto, align=4, name="d"
+SYM [BUILD], id#=15, len=16, owner_id#=8, flags={Ref,Set}, dt=Address, mt=Auto, align=16, name="p"
+SYM [BUILD], id#=16, len=4, owner_id#=8, flags={Ref,Set}, dt=Integer, mt=Auto, align=4, name="r"
+SYM [BUILD], id#=17, len=8, owner_id#=8, flags={Ref,Set}, dt=Aggr, mt=Auto, align=4, name="st1"
+SYM [BUILD], id#=18, len=1, owner_id#=8, flags={Ref,Set}, dt=Integer, mt=Auto, align=1, name="e1"
+SYM [BUILDB], id#=19, len=4, owner_id#=17, flags={Ref,Set}, dt=Integer, offs=0, name="x"
+SYM [BUILDB], id#=20, len=4, owner_id#=17, flags={Ref,Set}, dt=Integer, offs=4, name="y"
+SYM [BUILD], id#=21, len=4, flags={Ref,Set}, dt=Integer, mt=Shadow, align=4, name= "(i32)"
+SYM [BUILD], id#=9, symFlags={IsVarArg,IsPrototyped}, flags={Ref}, dt=Func, pt=External, name= "printf"
+SYM [BUILDE], id#=9, type#=1, linkage=Private
+SYMT [BUTYP], type#=2, len=0, flags={}, dt=Void
+SYM [BUILD], id#=22, symFlags={IsCtlBody,IsPrototyped,IsMain}, flags={FpcaBdy}, dt=Func, pt=Internal, name= "_CXX_PEP__Fv"
+SYM [BUILDE], id#=22, type#=2, linkage=Private
+EOF [BU2], len1=0, len2=0
+DATA [BUDATAD0], id#=1, val='00000000'X
+EOF [BU2], len1=0, len2=0
+BGN [BUT], modType=Program
+@ -- End function
+@ -- Begin function _Z4fun1i
+ENT [BUDR0], id#=2
+PSTR [BUDR0], id#=3
+LEX [BU2], level=1, id#=2
+LOD [BUDR0], id#=3
+STR [BUDR0], id#=4
+LDC [BUDR0], lit#=7
+STR [BUDR0], id#=6
+LDC [BUDR0], lit#=6
+STR [BUDR0], id#=7
+LOD [BUDR0], id#=4
+LOD [BUDR0], id#=6
+ADD [BU0]
+RSTR [BU0]
+RET [BU0]
+END [BUDR0], id#=2
+@ -- End function
+@ -- Begin function main
+ENT [BUDR0], id#=8
+LEX [BU2], level=1, id#=8
+LDC [BUDR0], lit#=12
+STR [BUDR0], id#=10
+LDC [BUDR0], lit#=7
+STR [BUDR0], id#=11
+LDC [BUDR0], lit#=11
+STR [BUDR0], id#=12
+LDC [BUDR0], lit#=10
+STR [BUDR0], id#=13
+LDC [BUDR0], lit#=9
+STR [BUDR0], id#=14
+LDA [BUDR0], id#=11
+STR [BUDR0], id#=15
+LDC [BUDR0], lit#=8
+STR [BUDR0], id#=18
+LDC [BUDR0], lit#=7
+STR [BUDR0], id#=19
+LDC [BUDR0], lit#=6
+STR [BUDR0], id#=20
+LCA [BUDR0], lit#=1
+CUP [BUCUPD], id#=9, parms=1
+POP [BU0]
+LCA [BUDR0], lit#=2
+LOD [BUDR0], id#=11
+LOD [BUDR0], id#=12
+CONV [BUT1], dt=Integer, len=4
+LOD [BUDR0], id#=13
+CONV [BUT1], dt=Integer, len=4
+LDC [BUDR0], lit#=9
+LOD [BUDR0], id#=15
+IND [BUDR0], id#=21
+CUP [BUCUPD], id#=9, parms=6
+POP [BU0]
+LDC [BUDR0], lit#=7
+CUP [BUCUPD], id#=2, parms=1
+STR [BUDR0], id#=16
+LCA [BUDR0], lit#=3
+LOD [BUDR0], id#=16
+CUP [BUCUPD], id#=9, parms=2
+POP [BU0]
+LCA [BUDR0], lit#=4
+LOD [BUDR0], id#=19
+CUP [BUCUPD], id#=9, parms=2
+POP [BU0]
+LCA [BUDR0], lit#=5
+LOD [BUDR0], id#=18
+CONV [BUT1], dt=Unsigned, len=4
+CUP [BUCUPD], id#=9, parms=2
+POP [BU0]
+LOD [BUDR0], id#=16
+RSTR [BU0]
+RET [BU0]
+END [BUDR0], id#=8
+@ -- End function
+@ -- Begin function _CXX_PEP__Fv
+ENT [BUDR0], id#=22
+LEX [BU2], level=1, id#=22
+CUP [BUCUPD], id#=8, parms=0
+POP [BU0]
+RET [BU0]
+END [BUDR0], id#=22
+@ -- End function
+EOF [BU2], len1=0, len2=0

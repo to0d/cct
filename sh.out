@@ -15,3 +15,5 @@
 ./TC210706F: output: done!
 ./TC210706G: output: done!
 ./TC210706H: output: done!
+./TC220116A: output: ir=217, mir_c=643
+./TC220116B: output: ir=217, pass1=327, pass2=628, pass3=621, pass4=643, pass5=657, pass6=676, pass7=155
